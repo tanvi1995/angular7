@@ -1,0 +1,33 @@
+<br>
+Task:
+<input type="text" [(ngModel)]='oneTask' placeholder="add task">
+<button (click)="sayHello()">Add Task</button>{{oneTask}}
+<br>
+<h1>Pending tasks </h1>
+<ol>
+  <li *ngFor="let task of myTasks; let ct = index">
+    {{task}} at {{ct}} position!
+    &nbsp;
+    <button (click)="taskDone(ct)">Done</button>
+  </li>
+  
+</ol>
+
+<h1>Completed Tasks</h1>
+<ol>
+  <li *ngFor="let t of taskCompleted ;let ct = index">
+  {{t}} at {{ct}} position!
+  &nbsp;
+  
+  </li>
+  </ol>
+<!--
+  <hr>
+  Currency Pipe: {{ salary | currency: 'INR' }}
+  <br>
+  Date Pipe Default: {{ myDate }}
+  <br>
+  Unsorted friends: {{ friends }}
+  <br>
+  Sorted Friends: {{ friends | stringSortPipe : 'dsc'}}
+-->

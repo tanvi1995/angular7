@@ -1,0 +1,24 @@
+<p>
+  template-form works!
+</p>
+
+
+
+<form #myForm="ngForm" (ngSubmit)="addFormUser(myForm.value)">
+  First Name: <input type="text" name="firstname" placeholder="Name..." ngModel>
+  <br><br>
+  Email: <input type="text"name="email" placeholder="Email...." ngModel>
+  <br><br>
+ <!-- Hobbies: <select name="hobby" ngModel>
+      <option value="Driving">Driving</option>
+      <option value="Painting">Painting</option>
+      <option value="Dancing">Dancing</option>
+      <option value="Singing">Singing</option>
+  </select>-->
+ <!--Latitude: <input type="number" name="address.geo.lat" ngModel>
+  <br><br>
+Longitude: <input type="number" name="address.geo.lng" ngModel>-->
+  <br><br>
+  <button type="submit">Add Data </button>
+  
+</form>
